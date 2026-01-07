@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Time Capsule Protocol</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="capsule-container">
+        <h1>Capsule Protocol</h1>
+        <p class="subtitle">Secure Data for Future Transmission</p>
+        
+        <form action="/submit_time_capsule" method="post" enctype="multipart/form-data">
+            <label for="capsule-message">Data Stream (Message):</label>
+            <textarea id="capsule-message" name="capsule_message" rows="4" required></textarea>
+            
+            <label for="capsule-file">Attachment (Optional):</label>
+            <input type="file" id="capsule-file" name="capsule_file">
+
+            <label for="recipient-email">Target Node (Email):</label>
+            <input type="email" id="recipient-email" name="recipient_email" required>
+
+            <label for="open-date">Activation Date:</label>
+            <input type="date" id="open-date" name="open_date" required>
+
+            <input type="submit" value="Lock Capsule">
+        </form>
+        
+        <a href="/">[ Terminate Session ]</a>
+    </div>
+</body>
+</html>

@@ -33,7 +33,7 @@ body {
 .capsule-container, .login-container {
     background: var(--card-bg);
     border: 1px solid var(--primary-neon);
-    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2), inset 0 0 20px rgba(0, 243, 255, 0.05);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2), inset 0 0 20px rgba(21, 228, 239, 0.05);
     padding: 40px;
     width: 100%;
     max-width: 500px;

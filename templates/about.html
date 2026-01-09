@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About The Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="capsule-container" style="max-width: 800px; text-align: left;">
+        <h1>About Protocol</h1>
+        <p class="subtitle">Mission & Creator</p>
+
+        <div class="about-content">
+            <h3>// The Creator</h3>
+            <p>
+                This project was architected by <strong>Nunna Dhruvith</strong>, a developer deeply passionate about 
+                bridging the gap between the present and the future through code. With a focus on 
+                secure backend systems and intuitive design, Dhruvith built this platform to ensure 
+                no memory is ever truly lost to time.
+            </p>
+            <br>
+
+            <h3>// The Mission</h3>
+            <p>
+                The Time Capsule is a trusted vault designed to preserve your most precious digital moments. 
+                Whether it's a message to a future self or a legacy left for a loved one, this system 
+                guarantees delivery. It is more than just a scheduler; it is a promise that your voice 
+                will be heard across time.
+            </p>
+            <br>
+
+            <h3>// Security Guarantee</h3>
+            <p>
+                We prioritize data sovereignty. All capsules are digitally locked until their precise 
+                activation moment. We guarantee that your data remains private, encrypted, and accessible 
+                only to the designated recipient at the exact time you choose—down to the minute.
+            </p>
+        </div>
+        
+        <br>
+        <div style="text-align: center;">
+            <a href="{{ url_for('home') }}" class="nav-link">[ Return to Login ]</a>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

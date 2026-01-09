@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #050505;
+    --card-bg: rgba(10, 10, 12, 0.95);
+    --primary-neon: #00f3ff;
+    --secondary-neon: #bc13fe;
+    --error-neon: #ff003c;
+    --text-color: #e0e0e0;
+    --input-bg: #0a0a0a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: 
+        linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(188, 19, 254, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container, .capsule-container {
+    background: var(--card-bg);
+    border: 1px solid var(--primary-neon);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.15), inset 0 0 30px rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    clip-path: polygon(
+        0 0, 
+        100% 0, 
+        100% calc(100% - 30px), 
+        calc(100% - 30px) 100%, 
+        0 100%
+    );
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-neon);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px var(--primary-neon);
+}
+
+.subtitle {
+    color: var(--secondary-neon);
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: var(--primary-neon);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    background: var(--input-bg);
+    border: 1px solid #333;
+    border-left: 3px solid var(--secondary-neon);
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+    background: #000;
+}
+
+input[type="submit"] {
+    background: transparent;
+    border: 2px solid var(--primary-neon);
+    color: var(--primary-neon);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background: var(--primary-neon);
+    color: #000;
+    box-shadow: 0 0 25px var(--primary-neon);
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--secondary-neon);
+    text-shadow: 0 0 8px var(--secondary-neon);
+}
+
+input[type="file"]::file-selector-button {
+    background: #222;
+    border: 1px solid var(--secondary-neon);
+    color: var(--secondary-neon);
+    padding: 8px 12px;
+    margin-right: 15px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+}
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-neon);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--primary-neon);
+}
+
+.nav-link {
+    color: var(--text-color);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 20px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-neon);
+    border-bottom: 2px solid var(--primary-neon);
+    text-shadow: 0 0 8px var(--primary-neon);
+}
+
+.about-content h3 {
+    color: var(--secondary-neon);
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.about-content p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.about-content strong {
+    color: var(--primary-neon);
+}
